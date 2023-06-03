@@ -1,34 +1,19 @@
 package com.goit.servlet;
 
-import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 //@WebServlet(value = "/time")
-@Slf4j
 public class TimeServlet extends HttpServlet {
 
     @Override
-    public void init() throws ServletException {
-        log.info("INIT METHOD");
-    }
-
-    @Override
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-    }
-
-    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
-        String message = String.format("GET METHOD:%s", req.getRequestURI());
-        log.info(message);
 
         String adjustTime = "";
         Long correctTime;
@@ -60,10 +45,5 @@ public class TimeServlet extends HttpServlet {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @Override
-    public void destroy() {
-        log.info("DESTROY METHOD");
     }
 }

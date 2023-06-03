@@ -121,19 +121,6 @@
        servlet app example
     </description>
     <servlet>
-        <servlet-name>DemoServlet</servlet-name>
-        <servlet-class>com.goit.servlet.DemoServlet</servlet-class>
-        <init-param>
-            <param-name>debug</param-name>
-            <param-value>0</param-value>
-        </init-param>
-        <init-param>
-            <param-name>listings</param-name>
-            <param-value>false</param-value>
-        </init-param>
-        <load-on-startup>10</load-on-startup>
-    </servlet>
-    <servlet>
         <servlet-name>TimeServlet</servlet-name>
         <servlet-class>com.goit.servlet.TimeServlet</servlet-class>
         <init-param>
@@ -146,24 +133,10 @@
         </init-param>
         <load-on-startup>10</load-on-startup>
     </servlet>
-    <servlet>
-        <servlet-name>ApplicationInitServlet</servlet-name>
-        <servlet-class>com.goit.servlet.ApplicationInitServlet</servlet-class>
-        <load-on-startup>0</load-on-startup>
-    </servlet>
 
-    <servlet-mapping>
-        <servlet-name>DemoServlet</servlet-name>
-        <url-pattern>/api/v1/demo</url-pattern>
-    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>TimeServlet</servlet-name>
         <url-pattern>/time</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>ApplicationInitServlet</servlet-name>
-        <url-pattern>/something</url-pattern>
     </servlet-mapping>
 
     <filter>
