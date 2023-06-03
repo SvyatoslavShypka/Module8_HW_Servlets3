@@ -1,4 +1,4 @@
-package com.goit.exception;
+package com.goit.crud.exception;
 
 public class DatasourceException extends RuntimeException {
 

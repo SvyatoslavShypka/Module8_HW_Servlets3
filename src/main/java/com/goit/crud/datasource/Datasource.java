@@ -1,7 +1,7 @@
-package com.goit.datasource;
+package com.goit.crud.datasource;
 
-import com.goit.exception.DatasourceException;
-import com.goit.util.Constants;
+import com.goit.crud.exception.DatasourceException;
+import com.goit.crud.util.Constants;
 import com.mysql.cj.jdbc.NonRegisteringDriver;
 import org.intellij.lang.annotations.Language;
 
@@ -11,8 +11,8 @@ import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.Properties;
 
-import static com.goit.util.Constants.CONNECTION_AUTOCOMMIT;
-import static com.goit.util.Constants.TRANSACTION_ISOLATION;
+import static com.goit.crud.util.Constants.CONNECTION_AUTOCOMMIT;
+import static com.goit.crud.util.Constants.TRANSACTION_ISOLATION;
 
 public class Datasource {
     private static final String DEFAULT_FILE_NAME = "application.properties";

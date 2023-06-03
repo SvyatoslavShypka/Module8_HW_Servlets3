@@ -1,4 +1,4 @@
-package com.goit.util;
+package com.goit.crud.util;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -19,4 +19,5 @@ public final class Constants {
     public static final String LOG_FILE = "log4j.appender.file";
     public static final String LOG_LEVEL = "log4j.logger.level";
     public static final String LOG_ENCODING = "log4j.logger.encoding";
+    public static final String TOKEN = "servlet.auth.token";
 }

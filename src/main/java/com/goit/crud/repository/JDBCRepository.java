@@ -1,8 +1,7 @@
-package com.goit.repository;
+package com.goit.crud.repository;
 
 
-import com.goit.datasource.Datasource;
-import com.goit.entity.FileEntity;
+import com.goit.crud.datasource.Datasource;
 import lombok.RequiredArgsConstructor;
 import org.intellij.lang.annotations.Language;
 
@@ -12,7 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public abstract class JDBCRepository<T> {
     @Language("SQL")
-    private final String findByIdQuery = "SELECT * FROM %s WHERE id=?;";
+    private final String findByIdQuery = "SELECT * FROM %s WHERE ?=?;";
     @Language("SQL")
     private final String findAllQuery = "SELECT * FROM %s;";
     @Language("SQL")
@@ -35,9 +34,9 @@ public abstract class JDBCRepository<T> {
 
     public abstract List<T> findAll();
 
-    public abstract FileEntity findById(String id);
+    public abstract T findById(Long id);
 
     public abstract T save(T entity);
 
-    public abstract void delete(String id);
+    public abstract void delete(Long id);
 }
